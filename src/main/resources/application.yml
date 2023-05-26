@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+# ????
+wxmini:
+  appid: "wx9f8c2ea69c6f6f14"
+  secret: "4e2244b4dce0d38ed5782393b65d1e66"
+
+ip : 121.4.79.106
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${ip}:3306/couseling
+    username: pslg
+    password: abc123456
+  redis:
+    host: ${ip}
+    port: 6379
+    database: 0
+    password: abc123456
+
+mybatis-plus:
+  mapper-locations: "classpath*:/mapper/**/*.xml"
+  typeAliasesPackage: com.example.psychologybackend.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+

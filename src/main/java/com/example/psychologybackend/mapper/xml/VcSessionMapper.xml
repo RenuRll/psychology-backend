@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.psychologybackend.mapper.VcSessionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.psychologybackend.entity.VcSession">
+        <id column="vc_id" property="vcId" />
+        <result column="vid" property="vid" />
+        <result column="eid" property="eid" />
+        <result column="date" property="date" />
+        <result column="type" property="type" />
+        <result column="duration" property="duration" />
+        <result column="rating" property="rating" />
+        <result column="comment_4c" property="comment4c" />
+        <result column="diagnosis_4v" property="diagnosis4v" />
+        <result column="content" property="content" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        vc_id, vid, eid, date, type, duration, rating, comment_4c, diagnosis_4v, content
+    </sql>
+
+</mapper>
