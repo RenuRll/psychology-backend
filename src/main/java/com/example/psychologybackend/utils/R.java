@@ -4,10 +4,10 @@ import lombok.Data;
 import org.apache.http.HttpStatus;
 
 @Data
-public class R<T> {
+public class R {
     private String msg;
     private Integer code;
-    private  T data;
+    private  Object data;
 
 
     public  static R ok(){
@@ -17,15 +17,15 @@ public class R<T> {
         return r;
     }
 
-    public static<T> R ok(String msg){
+    public static R ok(String msg){
         R r = new R();
         r.code = HttpStatus.SC_OK;
         r.msg = msg;
         return r;
     }
 
-    public static<T> R ok(T data){
-        R<T> r = new R<T>();
+    public static R ok(Object data){
+        R r = new R();
         r.code = HttpStatus.SC_OK;
         r.msg = "sucess";
         r.data = data;
