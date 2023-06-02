@@ -1,16 +1,18 @@
 package com.example.psychologybackend.mapper;
 
-import com.example.psychologybackend.entity.VcSession;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.psychologybackend.entity.VcSession;
 
 /**
- * <p>
- *  Mapper 接口
- * </p>
- *
- * @author renu
- * @since 2023-05-26
- */
+* @author renu
+* @description 针对表【vc_session】的数据库操作Mapper
+* @createDate 2023-06-02 16:18:03
+* @Entity com/example/psychologybackend.domain.VcSession
+*/
 public interface VcSessionMapper extends BaseMapper<VcSession> {
 
 }
+
+
+
+
