@@ -1,52 +1,54 @@
 package com.example.psychologybackend.entity;
-
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.Version;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
 
 /**
- * <p>
  * 
- * </p>
- *
- * @author renu
- * @since 2023-05-26
+ * @TableName supervisor
  */
+@TableName(value ="supervisor")
 @Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
 public class Supervisor implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-
-    @TableId(value = "eid", type = IdType.AUTO)
+    /**
+     * 
+     */
+    @TableId
     private Integer eid;
 
-    private String password;
-
-    private String name;
-
-    private String avatarUrl;
-
-    private Integer idNumber;
-
-    private String gender;
-
-    private String phone;
-
-    private String email;
-
-    private String avatatUrl;
-
+    /**
+     * 
+     */
     private String qualification;
 
+    /**
+     * 
+     */
     private String qualificationId;
 
+    /**
+     * 
+     */
     private String status;
 
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", eid=").append(eid);
+        sb.append(", qualification=").append(qualification);
+        sb.append(", qualificationId=").append(qualificationId);
+        sb.append(", status=").append(status);
+        sb.append(", serialVersionUID=").append(serialVersionUID);
+        sb.append("]");
+        return sb.toString();
+    }
 }

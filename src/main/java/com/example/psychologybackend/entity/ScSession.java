@@ -1,41 +1,68 @@
 package com.example.psychologybackend.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.Version;
-import java.time.LocalDateTime;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
+import java.util.Date;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
 
 /**
- * <p>
  * 
- * </p>
- *
- * @author renu
- * @since 2023-05-26
+ * @TableName sc_session
  */
+@TableName(value ="sc_session")
 @Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
 public class ScSession implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-
-    @TableId(value = "sc_id", type = IdType.AUTO)
+    /**
+     * 
+     */
+    @TableId
     private Integer scId;
 
-    private LocalDateTime date;
+    /**
+     * 开始时间
+     */
+    private Date beginTime;
 
-    private Integer duration;
+    /**
+     * 结束时间
+     */
+    private Date endTime;
 
-    private String content;
-
+    /**
+     * 
+     */
     private String cEid;
 
+    /**
+     * 
+     */
     private String sEid;
 
+    /**
+     * 通用会话id
+     */
+    private Integer sId;
 
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", scId=").append(scId);
+        sb.append(", beginTime=").append(beginTime);
+        sb.append(", endTime=").append(endTime);
+        sb.append(", cEid=").append(cEid);
+        sb.append(", sEid=").append(sEid);
+        sb.append(", sId=").append(sId);
+        sb.append(", serialVersionUID=").append(serialVersionUID);
+        sb.append("]");
+        return sb.toString();
+    }
 }

@@ -2,6 +2,7 @@ package com.example.psychologybackend.service;
 
 import com.example.psychologybackend.entity.Visitor;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.psychologybackend.utils.R;
 
 /**
  * <p>
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface VisitorService extends IService<Visitor> {
 
+    R wxLogin(String openid, String session_key);
 }
