@@ -40,6 +40,13 @@ public class R {
 
     }
 
+    public  static  R error (int code,String msg,Object obj){
+        R r = new R();
+        r.code =code;
+        r.msg = msg;
+        r.data = obj;
+        return  r;
+    }
     public static R error(String msg){
         // 固定的状态吗500
         return error(HttpStatus.SC_INTERNAL_SERVER_ERROR,msg);

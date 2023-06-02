@@ -1,10 +1,10 @@
 server:
-  port: 8080
+  port: 8090
 
 # ????
 wxmini:
-  appid: "wx9f8c2ea69c6f6f14"
-  secret: "4e2244b4dce0d38ed5782393b65d1e66"
+  appid: "wx3c86c641313e6426"
+  secret: "c63729874cefc16da42c8fb5ada52c14"
 
 ip : 121.4.79.106
 
@@ -26,6 +26,11 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+    #id类型。
 
 
 

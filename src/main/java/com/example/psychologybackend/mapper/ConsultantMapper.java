@@ -1,16 +1,18 @@
 package com.example.psychologybackend.mapper;
 
-import com.example.psychologybackend.entity.Consultant;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.psychologybackend.entity.Consultant;
 
 /**
- * <p>
- *  Mapper 接口
- * </p>
- *
- * @author renu
- * @since 2023-05-26
- */
+* @author renu
+* @description 针对表【consultant】的数据库操作Mapper
+* @createDate 2023-06-02 16:18:03
+* @Entity com/example/psychologybackend.domain.Consultant
+*/
 public interface ConsultantMapper extends BaseMapper<Consultant> {
 
 }
+
+
+
+

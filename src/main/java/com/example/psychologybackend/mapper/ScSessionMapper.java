@@ -1,16 +1,18 @@
 package com.example.psychologybackend.mapper;
 
-import com.example.psychologybackend.entity.ScSession;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.psychologybackend.entity.ScSession;
 
 /**
- * <p>
- *  Mapper 接口
- * </p>
- *
- * @author renu
- * @since 2023-05-26
- */
+* @author renu
+* @description 针对表【sc_session】的数据库操作Mapper
+* @createDate 2023-06-02 16:18:03
+* @Entity com/example/psychologybackend.domain.ScSession
+*/
 public interface ScSessionMapper extends BaseMapper<ScSession> {
 
 }
+
+
+
+
